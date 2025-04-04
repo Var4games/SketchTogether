@@ -8,7 +8,10 @@ import { io } from "socket.io-client";
 import AuthForm from "../components/AuthForm";
 import UserList from "../components/UserList";
 
-const socket = io("http://localhost:3001");
+// const socket = io("http://localhost:3001");
+const socket = io("https://sketchtogether-production.up.railway.app", {
+  transports: ["websocket"],
+});
 
 type Point = { x: number; y: number };
 type DrawLineProps = {
