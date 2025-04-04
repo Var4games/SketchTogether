@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎨 Real-time Collaborative Drawing & Chat App
 
-## Getting Started
+A real-time drawing and chat application using **Next.js** (React) for the frontend and **Node.js + Socket.io** for the backend. Users can log in, join rooms, collaborate on a shared canvas, and chat in real time.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+✅ **User Authentication** - Simple username-based login
+✅ **Create & Join Rooms** - Users can collaborate in separate rooms
+✅ **Real-time Drawing** - Canvas updates for all users in the room
+✅ **Persistent Chat** - Room-based chat history
+✅ **Online Users List** - View users currently in the room
+✅ **Canvas Controls** - Change brush color and clear canvas
+
+---
+
+## 🛠 Setup & Installation
+
+### 1️⃣ **Clone the Repository**
+
+```sh
+git clone https://github.com/your-repo-name.git
+cd your-repo-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ **Install Dependencies**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### **Frontend (Next.js)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+cd client
+npm install
+```
 
-## Learn More
+#### **Backend (Node.js + Socket.io)**
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+cd server
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3️⃣ **Run the Application**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### **Start Backend Server**
 
-## Deploy on Vercel
+```sh
+cd server
+npx ts-node index.ts
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### **Start Frontend Development Server**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+cd client
+npm run dev
+```
+
+---
+
+## 📌 Usage
+
+1️⃣ **Open the app in your browser:** `http://localhost:3000`
+2️⃣ **Enter a username and room name** to join or create a room
+3️⃣ **Start drawing** and chatting in real-time!
+
+---
+
+## 📁 Project Structure
+
+```
+📦 project-root
+ ┣ 📂 client       # Next.js Frontend
+ ┃ ┣ 📂 app        # Main pages
+ ┃ ┣ 📂 components   # UI components
+ ┃ ┣ 📂 hooks        # Custom hooks (useDraw)
+ ┃ ┗ 📂 utils        # Drawing utilities
+ ┣ 📂 server        # Node.js Backend
+ ┃ ┣ 📜 index.ts     # Main socket server
+ ┗ 📜 README.md      # Project documentation
+```
+
+---
+
+## 🌟 Technologies Used
+
+- **Frontend:** Next.js (React), TypeScript, Tailwind CSS
+- **Backend:** Node.js, Express, Socket.io
+- **Libraries:** `react-colorful` (Color Picker), `socket.io-client`
+
+---
+
+## 📌 Future Improvements
+
+- ✅ **User authentication with NextAuth.js**
+- ✅ **Database support (MongoDB) for persistent chat & drawings**
+- ✅ **Enhanced UI/UX with more tools (Eraser, Shapes, Layers)**
+
+---
+
+## 📧 Contact & Contributions
+
+Feel free to contribute to the project by submitting pull requests or reporting issues.
+
+📩 **Email:** 19vishnuk99@gmail.com  
+🔗 **GitHub:** [your-repo-link](https://github.com/your-repo-name)
