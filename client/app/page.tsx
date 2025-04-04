@@ -8,11 +8,9 @@ import { io } from "socket.io-client";
 import AuthForm from "../components/AuthForm";
 import UserList from "../components/UserList";
 
-// const socket = io("http://localhost:3001");
 const socket = io("https://sketchtogether-production.up.railway.app", {
   transports: ["websocket"],
 });
-
 type Point = { x: number; y: number };
 type DrawLineProps = {
   prevPoint: Point | null;
@@ -151,21 +149,24 @@ const Page: FC<PageProps> = () => {
       />
       <div className="flex flex-col w-1/3">
         <div className="w-full bg-white p-4 rounded-xl shadow-lg flex flex-col flex-grow">
-          <h3 className="text-lg font-semibold mb-2">💬 Chat</h3>
-          <div className="flex-1 overflow-y-auto border p-2 rounded-md bg-gray-100 h-80">
+          <h3 className="text-lg  dark:text-black font-semibold mb-2">
+            💬 Chat
+          </h3>
+          <div className="flex-1 overflow-y-auto border p-2 rounded-md bg-gray-100 dark:bg-gray-800 h-80">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className="p-2 bg-blue-100 my-1 rounded-lg text-sm"
+                className="p-2 my-1 rounded-lg text-sm bg-white dark:bg-gray-700 text-black dark:text-white"
               >
                 <strong>{msg.user}:</strong> {msg.message}
               </div>
             ))}
           </div>
+
           <div className="flex gap-2 mt-2">
             <input
               type="text"
-              className="flex-1 p-2 border rounded-lg"
+              className="flex-1 p-2 border  dark:text-black rounded-lg"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Type a message..."

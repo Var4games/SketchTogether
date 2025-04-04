@@ -66,14 +66,14 @@ const AuthForm = ({ username, room, setUsername, setRoom, joinRoom }) => {
         <input
           type="text"
           placeholder="Enter your name"
-          className="p-2 border rounded-lg w-full max-w-sm"
+          className="p-2  border dark:text-black rounded-lg w-full max-w-sm"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="text"
           placeholder="Enter room name"
-          className="p-2 border rounded-lg w-full max-w-sm"
+          className="p-2 border rounded-lg dark:text-black w-full max-w-sm"
           value={room}
           onChange={(e) => setRoom(e.target.value)}
         />
